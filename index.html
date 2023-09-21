@@ -14,10 +14,14 @@
 			:root {
 				--Ligth-green: #a4cf42;
 				--Dark-green: #778e40;
-				--Light-blue: #0b4173;
+				--Light-blue: #105ea2;
 				--Dark-blue: #121c4b;
 				--white: #ffffff;
 				--black: #000000;
+				/*declarando variables de tamaños para los textos*/
+				--sm: 14px;
+				--md: 16px;
+				--lg: 18px;
 			}
 			body {
 				font-family: "Quicksand", sans-serif;
@@ -29,30 +33,62 @@
 				display: flex;
 				justify-content: space-between;
 				margin-top: 0;
-				background-color: var(--Light-blue);
+				background-color: var(--Dark-blue);
+				padding: 0 24px;
 			}
 			.navbar-left {
 				display: flex;
+			}
+			.logo {
+				width: 100px;
+			}
+			@font-face {
+				font-family: "VTC Garage Sale";
+				src: url("./Fuentes/VTC-GarageSale.ttf") format("truetype");
+			}
+			.Titulo {
+				display: flex;
+				margin: 0 12px;
+				padding: 0 12px;
+			}
+			.Titulo h1 {
+				margin-right: 12px;
+				font-family: "VTC Garage Sale";
+				font-size: 40px;
+			}
+			.Titulo .Nombre {
+				color: var(--Ligth-green);
+			}
+			.Titulo .Apellido {
+				color: var(--Light-blue);
+			}
+			.navbar-right {
+				display: flex;
 				margin: 12px;
 			}
-			.navbar-left ul {
-				list-style: none;
+			.navbar-right {
 				display: flex;
 				align-items: center;
-				margin-left: 12px;
-				padding: 0;
+				padding: 32px;
 				margin: 0;
 			}
-			.navbar-left ul a {
+			.navbar-right .container-menu {
+				margin-left: 16px;
+			}
+			.navbar-right .container-menu a {
 				text-decoration: none;
-				color: var(--very-light-pink);
-				border: 1px solid var(--white);
+				font-size: var(--lg);
+				font-weight: bold;
+				justify-content: space-around;
+				color: var(--white);
+				/* border: 1px solid var(--white); */
 				padding: 8px;
 				border-radius: 8px;
 			}
-			.navbar-left ul a:hover {
-				border: 1px solid var(--hospital-green);
-				color: var(--hospital-green);
+			.navbar-right .container-menu a:hover {
+				border: 1px solid var(--Dark-green);
+				color: var(--Dark-green);
+				background-color: var(--Ligth-green);
 			}
 		</style>
 	</head>
@@ -60,14 +96,19 @@
 		<!--Menu de barra de navegacion-->
 		<nav>
 			<!--posicion al lado izquierdo-->
-			<img src="./Logo Provicional.png" alt="logo" class="logo" />
-			<!--Posicion a la derecha-->
+			<!-- NOTA: quedaria mejor un logo horizontal -->
 			<div class="navbar-left">
-				<ul>
-					<li><a href="">Nosotros</a></li>
-					<li><a href="">Servicios</a></li>
-					<li><a href="">Contacto</a></li>
-				</ul>
+				<img src="./Logo Provicional.png" alt="logo" class="logo" />
+				<div class="Titulo">
+					<h1 class="Nombre">GRANDES</h1>
+					<h1 class="Apellido">TRIUNFADORES</h1>
+				</div>
+			</div>
+			<!--Posicion a la derecha-->
+			<div class="navbar-right">
+				<div class="container-menu"><a href="">Nosotros</a></div>
+				<div class="container-menu"><a href="">Servicios</a></div>
+				<div class="container-menu"><a href="">Contacto</a></div>
 			</div>
 		</nav>
 	</body>
