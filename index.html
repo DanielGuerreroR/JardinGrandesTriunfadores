@@ -15,7 +15,7 @@
 				--Ligth-green: #a4cf42;
 				--Dark-green: #778e40;
 				--Light-blue: #105ea2;
-				--Dark-blue: #121c4b;
+				--Dark-blue: #1f2e7a;
 				--white: #ffffff;
 				--black: #000000;
 				/*declarando variables de tamaños para los textos*/
@@ -90,6 +90,43 @@
 				color: var(--Dark-green);
 				background-color: var(--Ligth-green);
 			}
+			/*Slide de imagenes*/
+			.Slide {
+				height: 500px;
+			}
+			.Slide img {
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
+			}
+			/*Nosotros*/
+			.nosotros {
+				/* width: 100vw; */
+				margin: 50px 40px;
+				border: 4px solid;
+				border-radius: 40px;
+				border-color: var(--Dark-green);
+				padding: 50px;
+				background: radial-gradient(
+					circle at 100% 600%,
+					/*posicionamiento, horizontal izq-der y vertical arriba-abajo*/
+						var(--white) 80%,
+					var(--Ligth-green) /*colores del gradiente y porcentaje que ocupa*/
+				);
+				text-align: center;
+				box-shadow: 5px 5px 10px rgba(30, 46, 122, 0.5);
+				/*desplazamiento horizontal, vertical, blur de la sombra, color, porcentaje de transparencia*/
+			}
+			.head-nosotros {
+				font-size: 52px;
+				color: var(--Ligth-green);
+				margin-top: 0;
+			}
+			.body-nosotros {
+				margin-bottom: 0;
+				font-size: 26px;
+			}
+			/*Servicios*/
 		</style>
 	</head>
 	<body>
@@ -98,7 +135,7 @@
 			<!--posicion al lado izquierdo-->
 			<!-- NOTA: quedaria mejor un logo horizontal -->
 			<div class="navbar-left">
-				<img src="./Logo Provicional.png" alt="logo" class="logo" />
+				<img src="./assets/Logo Provicional.png" alt="logo" class="logo" />
 				<div class="Titulo">
 					<h1 class="Nombre">GRANDES</h1>
 					<h1 class="Apellido">TRIUNFADORES</h1>
@@ -111,5 +148,27 @@
 				<div class="container-menu"><a href="">Contacto</a></div>
 			</div>
 		</nav>
+		<!--Slide de Imagenes-->
+		<div class="Slide">
+			<img
+				src="./assets/entregadefotografiasfinales/_MG_0675.jpg"
+				alt="Slide"
+				class="Slide_Photo" />
+		</div>
+		<!--Nosotros-->
+		<div class="nosotros">
+			<h1 class="head-nosotros">Nosotros</h1>
+			<p class="body-nosotros">
+				Un mágico lugar, con amplios espacios que les permite a los niños y las
+				niñas disfrutar de actividades, juegos, deportes y lúdicas con los que
+				desarrollan y forman su personalidad con valores y virtudes que
+				trascenderán su vida.<br />
+				Somos una organización dedicada al desarrollo integral de los niños y
+				niñas de 0 a 10 años de edad; más de 24 años de experiencia y unas
+				instalaciones increíbles nos permite contar con un amplio portafolio de
+				servicios.
+			</p>
+		</div>
+		<!--Servicios-->
 	</body>
 </html>
