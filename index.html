@@ -27,6 +27,8 @@
 				font-family: "Quicksand", sans-serif;
 				margin: 0;
 				padding: 0;
+				background-image: url("./assets/Fondo/4277230_2267273.jpg");
+				background-repeat: repeat;
 			}
 			/*Menu de Navbar*/
 			nav {
@@ -35,6 +37,8 @@
 				margin-top: 0;
 				background-color: var(--Dark-blue);
 				padding: 0 24px;
+				border-bottom: 4px solid;
+				border-color: #a4cf42;
 			}
 			.navbar-left {
 				display: flex;
@@ -93,14 +97,19 @@
 			/*Slide de imagenes*/
 			.Slide {
 				height: 500px;
+				margin: 20px;
 			}
 			.Slide img {
 				object-fit: cover;
 				width: 100%;
 				height: 100%;
+				border-radius: 20px;
+				border: 4px solid;
+				border-color: #a4cf42;
+				box-shadow: 5px 5px 10px var(--Dark-blue);
 			}
-			/*Nosotros*/
-			.nosotros {
+			/*tarjetas*/
+			.tarjetas {
 				/* width: 100vw; */
 				margin: 50px 40px;
 				border: 4px solid;
@@ -114,19 +123,60 @@
 					var(--Ligth-green) /*colores del gradiente y porcentaje que ocupa*/
 				);
 				text-align: center;
-				box-shadow: 5px 5px 10px rgba(30, 46, 122, 0.5);
+				box-shadow: 5px 5px 10px var(--Dark-blue);
 				/*desplazamiento horizontal, vertical, blur de la sombra, color, porcentaje de transparencia*/
 			}
-			.head-nosotros {
+			.head-tarjetas {
 				font-size: 52px;
 				color: var(--Ligth-green);
 				margin-top: 0;
 			}
-			.body-nosotros {
+			.body-tarjetas {
 				margin-bottom: 0;
 				font-size: 26px;
 			}
 			/*Servicios*/
+			.servicios {
+				background: radial-gradient(
+					circle at 100% 200%,
+					/*posicionamiento, horizontal izq-der y vertical arriba-abajo*/
+						var(--white) 80%,
+					var(--Ligth-green) /*colores del gradiente y porcentaje que ocupa*/
+				);
+			}
+			.icon-container {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, 200px);
+				gap: 26px;
+				justify-content: center;
+				margin-top: 50px;
+			}
+			.icons img {
+				width: 100px;
+			}
+
+			.otros {
+				/* width: 100vw; */
+				margin: 50px 40px;
+				border: 4px solid;
+				border-radius: 40px;
+				border-color: var(--Dark-blue);
+				padding: 50px;
+				background: radial-gradient(
+					circle at 100% 600%,
+					/*posicionamiento, horizontal izq-der y vertical arriba-abajo*/
+						var(--white) 80%,
+					var(--Light-blue) /*colores del gradiente y porcentaje que ocupa*/
+				);
+				text-align: center;
+				box-shadow: 5px 5px 10px var(--Dark-blue);
+				/*desplazamiento horizontal, vertical, blur de la sombra, color, porcentaje de transparencia*/
+			}
+			.head-otros {
+				font-size: 52px;
+				color: var(--Light-blue);
+				margin-top: 0;
+			}
 		</style>
 	</head>
 	<body>
@@ -156,19 +206,100 @@
 				class="Slide_Photo" />
 		</div>
 		<!--Nosotros-->
-		<div class="nosotros">
-			<h1 class="head-nosotros">Nosotros</h1>
-			<p class="body-nosotros">
-				Un mágico lugar, con amplios espacios que les permite a los niños y las
-				niñas disfrutar de actividades, juegos, deportes y lúdicas con los que
-				desarrollan y forman su personalidad con valores y virtudes que
-				trascenderán su vida.<br />
-				Somos una organización dedicada al desarrollo integral de los niños y
-				niñas de 0 a 10 años de edad; más de 24 años de experiencia y unas
-				instalaciones increíbles nos permite contar con un amplio portafolio de
-				servicios.
+		<div class="tarjetas">
+			<h1 class="head-tarjetas">Nosotros</h1>
+			<p class="body-tarjetas">
+				¡Bienvenido al Jardín Infantil Grandes Triunfadores! Con 16 años de
+				experiencia en el cuidado y desarrollo de niños, somos un lugar donde
+				tus hijos pueden crecer, aprender y jugar en un entorno seguro y
+				estimulante. Nuestras amplias instalaciones cuentan con zonas verdes en
+				su interior, brindando a los pequeños un espacio al aire libre para
+				divertirse y explorar.<br />
+				Además, nos enorgullecemos de contar con espacios adecuados y equipados
+				según la edad de cada niño, garantizando un entorno de aprendizaje
+				adaptado a sus necesidades individuales. Con una pista de patinaje y
+				baloncesto, un salón polimotor, zona de lectura, salón de juegos y una
+				cómoda zona de alimentación, ofrecemos una experiencia integral para el
+				desarrollo de tus hijos. En Grandes Triunfadores, nos comprometemos a
+				brindarles un entorno donde puedan crecer felices y saludables. ¡Únete a
+				nuestra familia hoy mismo!
 			</p>
 		</div>
 		<!--Servicios-->
+		<div class="tarjetas servicios">
+			<h1 class="head-tarjetas">Servicios</h1>
+			<div class="jardin tarjetas">
+				<h1 class="head-tarjetas">Jardin</h1>
+				<p class="body-tarjetas">
+					En Grandes Triunfadores, nuestro principal enfoque es el cuidado y la
+					estimulación del aprendizaje de los más pequeños. Nuestro servicio de
+					jardín infantil se dedica a proporcionar un entorno seguro y
+					enriquecedor donde los niños pueden crecer, explorar y aprender a
+					través de actividades diseñadas específicamente para su desarrollo.
+				</p>
+				<div class="icon-container">
+					<div class="icons">
+						<figure>
+							<img src="./assets/icons/bebe.png" alt="Bebe" />
+							<figcaption>3 meses - 1 año</figcaption>
+						</figure>
+					</div>
+					<div class="icons">
+						<figure>
+							<img src="./assets/icons/niña pequeño.png" alt="Niña pequeña" />
+							<figcaption>1 - 2 años</figcaption>
+						</figure>
+					</div>
+					<div class="icons">
+						<figure>
+							<img src="./assets/icons/niña jugando.png" alt="Niño jugando" />
+							<figcaption>2 - 3 años</figcaption>
+						</figure>
+					</div>
+					<div class="icons">
+						<figure>
+							<img src="./assets/icons/nina.png" alt="Niña" />
+							<figcaption>3 - 4 años</figcaption>
+						</figure>
+					</div>
+					<div class="icons">
+						<figure>
+							<img src="./assets/icons/niña leyendo.png" alt="Niña leyendo" />
+							<figcaption>4 - 5 años</figcaption>
+						</figure>
+					</div>
+					<div class="icons">
+						<figure>
+							<img
+								src="./assets/icons/niña estudiando.png"
+								alt="Niña estudiando" />
+							<figcaption>5 - 6 años</figcaption>
+						</figure>
+					</div>
+				</div>
+			</div>
+			<div class="tarjetas otros">
+				<h1 class="head-otros">Otros servicios</h1>
+				<p class="body-tarjetas">
+					Además de nuestro servicio de jardín infantil, en Grandes Triunfadores
+					también ofrecemos una variedad de servicios adicionales para
+					satisfacer las necesidades de las familias. Estos servicios incluyen
+					[mencionar los servicios adicionales, por ejemplo, cuidado después de
+					clases, programas de enriquecimiento, eventos especiales, etc.].
+					Estamos comprometidos a brindar un apoyo integral a los padres y a
+					enriquecer la experiencia de aprendizaje de sus hijos.
+				</p>
+			</div>
+		</div>
+		<!--Creditos de los iconos que vamos a usar
+<a href="https://www.flaticon.es/iconos-gratis/chico" title="chico iconos">Chico iconos creados por Freepik - Flaticon</a>
+<a href="https://www.flaticon.es/iconos-gratis/infantil" title="infantil iconos">Infantil iconos creados por Freepik - Flaticon</a>
+<a href="https://www.flaticon.es/iconos-gratis/autismo" title="autismo iconos">Autismo iconos creados por Freepik - Flaticon</a>
+<a href="https://www.flaticon.es/iconos-gratis/nina" title="niña iconos">Niña iconos creados por Freepik - Flaticon</a>
+<a href="https://www.flaticon.es/iconos-gratis/leyendo" title="leyendo iconos">Leyendo iconos creados por Freepik - Flaticon</a>
+<a href="https://www.flaticon.es/iconos-gratis/estudiante" title="estudiante iconos">Estudiante iconos creados por Freepik - Flaticon</a>
+fondo
+<a href="https://www.freepik.es/vector-gratis/patron-colorido-garabatos-animales-palabras_4277230.htm#query=patron%20infantil&position=1&from_view=search&track=ais">Imagen de pikisuperstar</a> en Freepik
+-->
 	</body>
 </html>
