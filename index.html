@@ -19,9 +19,9 @@
 				--white: #ffffff;
 				--black: #000000;
 				/*declarando variables de tamaños para los textos*/
-				--sm: 14px;
-				--md: 16px;
-				--lg: 18px;
+				--sm: 20px;
+				--md: 26px;
+				--lg: 52px;
 			}
 			body {
 				font-family: "Quicksand", sans-serif;
@@ -81,7 +81,7 @@
 			}
 			.navbar-right .container-menu a {
 				text-decoration: none;
-				font-size: var(--lg);
+				font-size: var(--md);
 				font-weight: bold;
 				justify-content: space-around;
 				color: var(--white);
@@ -96,22 +96,23 @@
 			}
 			/*Slide de imagenes*/
 			.Slide1 {
-				height: 500px;
+				height: 80vh;
 				margin: 20px;
+				border-radius: 20px;
+				border: 4px solid;
+				border-color: #a4cf42;
+				box-shadow: 5px 5px 10px var(--Dark-blue);
+				overflow: hidden;
 			}
 			.Slide1 img {
 				object-fit: cover;
 				width: 100%;
 				height: 100%;
-				border-radius: 20px;
-				border: 4px solid;
-				border-color: #a4cf42;
-				box-shadow: 5px 5px 10px var(--Dark-blue);
 			}
 			/*tarjetas*/
 			.tarjetas {
 				/* width: 100vw; */
-				margin: 50px 40px;
+				margin: 200px 40px;
 				border: 4px solid;
 				border-radius: 40px;
 				border-color: var(--Dark-green);
@@ -126,14 +127,17 @@
 				box-shadow: 5px 5px 10px var(--Dark-blue);
 				/*desplazamiento horizontal, vertical, blur de la sombra, color, porcentaje de transparencia*/
 			}
+			.sub-tarjetas {
+				margin: 50px 40px;
+			}
 			.head-tarjetas {
-				font-size: 52px;
+				font-size: var(--lg);
 				color: var(--Ligth-green);
 				margin-top: 0;
 			}
 			.body-tarjetas {
 				margin-bottom: 0;
-				font-size: 26px;
+				font-size: var(--md);
 			}
 			/*Servicios*/
 			.servicios {
@@ -146,9 +150,11 @@
 			}
 			.icon-container {
 				display: grid;
-				grid-template-columns: repeat(auto-fill, 200px);
+				grid-template-columns: repeat(auto-fit, 200px);
+				/* auto-fill rellena el espacio con columnas del tamaño puesto, auto-fit ajusta el tamaño de las columnas */
 				gap: 26px;
 				justify-content: center;
+				align-items: center;
 				margin-top: 50px;
 			}
 			.icons img {
@@ -179,9 +185,78 @@
 			}
 
 			/*Conocenos*/
+			.conocenos {
+				background: radial-gradient(
+					circle at 100% 200%,
+					/*posicionamiento, horizontal izq-der y vertical arriba-abajo*/
+						var(--white) 70%,
+					var(--Ligth-green) /*colores del gradiente y porcentaje que ocupa*/
+				);
+			}
 			.conocenos-body {
 				display: flex;
 				justify-content: center;
+			}
+			.info-container {
+				width: 50%;
+				background: radial-gradient(
+					circle at 100% 100%,
+					/*posicionamiento, horizontal izq-der y vertical arriba-abajo*/
+						var(--white) 60%,
+					var(--Ligth-green) /*colores del gradiente y porcentaje que ocupa*/
+				);
+			}
+			.info {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 20px;
+				border-bottom: 3px solid;
+				border-color: var(--Dark-green);
+			}
+			.head-info {
+				font-size: var(--md);
+				font-weight: bold;
+				color: var(--Dark-green);
+			}
+			.info-container .info:last-child {
+				border-bottom: none;
+			}
+			.body-info {
+				display: flex;
+				align-items: center;
+				justify-content: end;
+				gap: 20px;
+			}
+			.body-info img {
+				width: 30px;
+			}
+			.body-info a {
+				text-decoration: none;
+				color: inherit;
+				font-size: var(--sm);
+			}
+			.info-list .body-info {
+				margin-bottom: 10px;
+			}
+			.info-list:last-child {
+				margin-bottom: 0;
+			}
+
+			.slide2 {
+				width: 50%;
+				padding: 0;
+				border-color: var(--Dark-blue);
+				box-shadow: 5px 5px 10px var(--Dark-blue);
+				justify-content: center;
+				align-items: center;
+				overflow: hidden;
+			}
+			.slide2 img {
+				object-fit: cover;
+				width: 110%;
+				height: 110%;
+				object-position: center;
 			}
 		</style>
 	</head>
@@ -199,9 +274,9 @@
 			</div>
 			<!--Posicion a la derecha-->
 			<div class="navbar-right">
-				<div class="container-menu"><a href="">Nosotros</a></div>
-				<div class="container-menu"><a href="">Servicios</a></div>
-				<div class="container-menu"><a href="">Conocenos</a></div>
+				<div class="container-menu"><a href="#Nosotros">Nosotros</a></div>
+				<div class="container-menu"><a href="#Servicios">Servicios</a></div>
+				<div class="container-menu"><a href="#Conocenos">Conocenos</a></div>
 			</div>
 		</nav>
 		<!--Slide de Imagenes-->
@@ -212,7 +287,7 @@
 				class="Slide_Photo" />
 		</div>
 		<!--Nosotros-->
-		<div class="tarjetas">
+		<div id="Nosotros" class="tarjetas">
 			<h1 class="head-tarjetas">Nosotros</h1>
 			<p class="body-tarjetas">
 				¡Bienvenido al Jardín Infantil Grandes Triunfadores! Con 16 años de
@@ -232,9 +307,9 @@
 			</p>
 		</div>
 		<!--Servicios-->
-		<div class="tarjetas servicios">
+		<div id="Servicios" class="tarjetas servicios">
 			<h1 class="head-tarjetas">Servicios</h1>
-			<div class="jardin tarjetas">
+			<div class="jardin tarjetas sub-tarjetas">
 				<h1 class="head-tarjetas">Jardin</h1>
 				<p class="body-tarjetas">
 					En Grandes Triunfadores, nuestro principal enfoque es el cuidado y la
@@ -284,38 +359,108 @@
 					</div>
 				</div>
 			</div>
-			<div class="tarjetas otros">
+			<div class="tarjetas otros sub-tarjetas">
 				<h1 class="head-otros">Otros servicios</h1>
 				<p class="body-tarjetas">
 					Además de nuestro servicio de jardín infantil, en Grandes Triunfadores
-					también ofrecemos una variedad de servicios adicionales para
-					satisfacer las necesidades de las familias. Estos servicios incluyen
-					[mencionar los servicios adicionales, por ejemplo, cuidado después de
-					clases, programas de enriquecimiento, eventos especiales, etc.].
+					tambi&eacute;n ofrecemos una variedad de servicios adicionales para
+					satisfacer las necesidades de las familias. Estos servicios incluyen:
+				</p>
+				<div class="icon-container">
+					<div class="icons">
+						<figure>
+							<img src="./assets/icons/niña deporte.png" alt="Bebe" />
+							<figcaption>L&uacute;dicas Deportivas</figcaption>
+						</figure>
+					</div>
+					<div class="icons">
+						<figure>
+							<img src="./assets/icons/niña ballet.png" alt="Niña pequeña" />
+							<figcaption>Clases de Ballet</figcaption>
+						</figure>
+					</div>
+					<div class="icons">
+						<figure>
+							<img src="./assets/icons/tareas.png" alt="Niño jugando" />
+							<figcaption>Asesor&iacute;a de Tareas</figcaption>
+						</figure>
+					</div>
+					<div class="icons">
+						<figure>
+							<img src="./assets/icons/niña vacaciones.png" alt="Niña" />
+							<figcaption>Vacaciones Recreativas</figcaption>
+						</figure>
+					</div>
+				</div>
+				<p class="body-tarjetas">
 					Estamos comprometidos a brindar un apoyo integral a los padres y a
 					enriquecer la experiencia de aprendizaje de sus hijos.
 				</p>
 			</div>
 		</div>
 		<!--Conocenos-->
-		<div class="tarjetas conocenos">
+		<div id="Conocenos" class="tarjetas conocenos">
 			<h1 class="head-tarjetas">Conocenos</h1>
 			<div class="conocenos-body">
-				<div class="tarjetas info-container">
+				<div class="tarjetas sub-tarjetas info-container">
 					<div class="info">
 						<div class="head-info">Direccion</div>
-						<div class="body-info"></div>
+						<div class="body-info">
+							<img src="./assets/icons/ubicacion.png" />
+							<a href="https://maps.app.goo.gl/4deRHQDbT8nbJDQSA"
+								>Cra. 94 &#35;147-04, Suba, Bogotá</a
+							>
+						</div>
 					</div>
 					<div class="info">
 						<div class="head-info">Contacto</div>
-						<div class="body-info"></div>
+						<div class="info-list">
+							<div class="body-info">
+								<img src="./assets/icons/Celular.png" />
+								<a href="tel:3009737624">3009737624</a>
+							</div>
+
+							<div class="body-info">
+								<img src="./assets/icons/correo.png" />
+								<a href="mailto:comunicacionespcgt@gmail.com "
+									>comunicacionespcgt&commat;gmail.com
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="info">
+						<div class="head-info">Nuestras Redes</div>
+						<div class="info-list">
+							<div class="body-info">
+								<img src="./assets/icons/instagram.png" />
+								<a href="https://www.instagram.com/pcgrandestriunfadores/"
+									>&commat;GrandesTriunfadores</a
+								>
+							</div>
+							<div class="body-info">
+								<img src="./assets/icons/facebook.png" />
+								<a
+									href="https://www.facebook.com/profile.php?id=100001593167930"
+									>Grandes Triunfadores</a
+								>
+							</div>
+						</div>
 					</div>
 					<div class="info">
 						<div class="head-info">Horario de atención</div>
-						<div class="body-info"></div>
+						<div class="body-info">
+							<img src="./assets/icons/tiempo.png" />
+							<a href="https://maps.app.goo.gl/4deRHQDbT8nbJDQSA"
+								>Cra. 94 &#35;147-04, Suba, Bogotá</a
+							>
+						</div>
 					</div>
 				</div>
-				<div class="slide2 tarjetas"></div>
+				<div class="slide2 tarjetas sub-tarjetas">
+					<img
+						src="./assets/entregadefotografiasfinales/_MG_0654.jpg"
+						alt="Slide2" />
+				</div>
 			</div>
 		</div>
 		<!--Creditos de los iconos que vamos a usar
@@ -325,6 +470,16 @@
 <a href="https://www.flaticon.es/iconos-gratis/nina" title="niña iconos">Niña iconos creados por Freepik - Flaticon</a>
 <a href="https://www.flaticon.es/iconos-gratis/leyendo" title="leyendo iconos">Leyendo iconos creados por Freepik - Flaticon</a>
 <a href="https://www.flaticon.es/iconos-gratis/estudiante" title="estudiante iconos">Estudiante iconos creados por Freepik - Flaticon</a>
+<a href="https://www.flaticon.es/iconos-gratis/deportivo" title="deportivo iconos">Deportivo iconos creados por Freepik - Flaticon</a>
+<a href="https://www.flaticon.es/iconos-gratis/diverso" title="diverso iconos">Diverso iconos creados por Freepik - Flaticon</a>
+<a href="https://www.flaticon.es/iconos-gratis/lista" title="lista iconos">Lista iconos creados por Kiranshastry - Flaticon</a>
+<a href="https://www.flaticon.es/iconos-gratis/vacaciones" title="vacaciones iconos">Vacaciones iconos creados por Freepik - Flaticon</a>
+<a href="https://www.flaticon.es/iconos-gratis/ubicacion" title="ubicación iconos">Ubicación iconos creados por Freepik - Flaticon</a>
+<a href="https://www.flaticon.es/iconos-gratis/instagram" title="instagram iconos">Instagram iconos creados por Freepik - Flaticon</a>
+<a href="https://www.flaticon.es/iconos-gratis/facebook" title="facebook iconos">Facebook iconos creados por Freepik - Flaticon</a>
+<a href="https://www.flaticon.es/iconos-gratis/whatsapp" title="whatsapp iconos">Whatsapp iconos creados por Freepik - Flaticon</a>
+<a href="https://www.flaticon.es/iconos-gratis/llamada" title="llamada iconos">Llamada iconos creados por Gregor Cresnar - Flaticon</a>
+<a href="https://www.flaticon.es/iconos-gratis/correo" title="correo iconos">Correo iconos creados por Freepik - Flaticon</a>
 fondo
 <a href="https://www.freepik.es/vector-gratis/patron-colorido-garabatos-animales-palabras_4277230.htm#query=patron%20infantil&position=1&from_view=search&track=ais">Imagen de pikisuperstar</a> en Freepik
 -->
