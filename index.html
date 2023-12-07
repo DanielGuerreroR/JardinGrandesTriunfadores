@@ -35,7 +35,7 @@
 				display: flex;
 				justify-content: space-between;
 				margin-top: 0;
-				background-color: var(--Dark-blue);
+				background-color: #203ac1;
 				padding: 0 24px;
 				border-bottom: 4px solid;
 				border-color: #a4cf42;
@@ -44,7 +44,7 @@
 				display: flex;
 			}
 			.logo {
-				width: 100px;
+				width: 120px;
 			}
 			@font-face {
 				font-family: "VTC Garage Sale";
@@ -56,9 +56,10 @@
 				padding: 0 12px;
 			}
 			.Titulo h1 {
+				-webkit-text-stroke: 0.1px black;
 				margin-right: 12px;
 				font-family: "VTC Garage Sale";
-				font-size: 40px;
+				font-size: 50px;
 			}
 			.Titulo .Nombre {
 				color: var(--Ligth-green);
@@ -148,7 +149,7 @@
 					var(--Ligth-green) /*colores del gradiente y porcentaje que ocupa*/
 				);
 			}
-			.icon-container {
+			.service-container {
 				display: grid;
 				grid-template-columns: repeat(auto-fit, 200px);
 				/* auto-fill rellena el espacio con columnas del tamaño puesto, auto-fit ajusta el tamaño de las columnas */
@@ -157,7 +158,7 @@
 				align-items: center;
 				margin-top: 50px;
 			}
-			.icons img {
+			.service img {
 				width: 100px;
 			}
 
@@ -260,7 +261,6 @@
 			}
 			/*parte responseve*/
 			@media (max-width: 640px) {
-				
 			}
 		</style>
 	</head>
@@ -270,7 +270,7 @@
 			<!--posicion al lado izquierdo-->
 			<!-- NOTA: quedaria mejor un logo horizontal -->
 			<div class="navbar-left">
-				<img src="./assets/Logo Provicional.png" alt="logo" class="logo" />
+				<img src="./assets/Logo Jardin.svg" alt="logo" class="logo" />
 				<div class="Titulo">
 					<h1 class="Nombre">GRANDES</h1>
 					<h1 class="Apellido">TRIUNFADORES</h1>
@@ -302,12 +302,12 @@
 				divertirse y explorar.<br />
 				Además, nos enorgullecemos de contar con espacios adecuados y equipados
 				según la edad de cada niño, garantizando un entorno de aprendizaje
-				adaptado a sus necesidades individuales. Con una pista de patinaje y
-				baloncesto, un salón polimotor, zona de lectura, salón de juegos y una
-				cómoda zona de alimentación, ofrecemos una experiencia integral para el
-				desarrollo de tus hijos. En Grandes Triunfadores, nos comprometemos a
-				brindarles un entorno donde puedan crecer felices y saludables. ¡Únete a
-				nuestra familia hoy mismo!
+				adaptado a sus necesidades individuales. Con una pista de patinaje, un
+				salón polimotor, zona de lectura, salón de juegos y una cómoda zona de
+				alimentación, ofrecemos una experiencia integral para el desarrollo de
+				tus hijos. En Grandes Triunfadores, nos comprometemos a brindarles un
+				entorno donde puedan crecer felices y saludables. ¡Únete a nuestra
+				familia hoy mismo!
 			</p>
 		</div>
 		<!--Servicios-->
@@ -322,38 +322,32 @@
 					enriquecedor donde los niños pueden crecer, explorar y aprender a
 					través de actividades diseñadas específicamente para su desarrollo.
 				</p>
-				<div class="icon-container">
-					<div class="icons">
-						<figure>
-							<img src="./assets/icons/bebe.png" alt="Bebe" />
-							<figcaption>3 meses - 1 año</figcaption>
-						</figure>
-					</div>
-					<div class="icons">
+				<div class="service-container">
+					<div class="service">
 						<figure>
 							<img src="./assets/icons/niña pequeño.png" alt="Niña pequeña" />
 							<figcaption>1 - 2 años</figcaption>
 						</figure>
 					</div>
-					<div class="icons">
+					<div class="service">
 						<figure>
 							<img src="./assets/icons/niña jugando.png" alt="Niño jugando" />
 							<figcaption>2 - 3 años</figcaption>
 						</figure>
 					</div>
-					<div class="icons">
+					<div class="service">
 						<figure>
 							<img src="./assets/icons/nina.png" alt="Niña" />
 							<figcaption>3 - 4 años</figcaption>
 						</figure>
 					</div>
-					<div class="icons">
+					<div class="service">
 						<figure>
 							<img src="./assets/icons/niña leyendo.png" alt="Niña leyendo" />
 							<figcaption>4 - 5 años</figcaption>
 						</figure>
 					</div>
-					<div class="icons">
+					<div class="service">
 						<figure>
 							<img
 								src="./assets/icons/niña estudiando.png"
@@ -370,26 +364,26 @@
 					tambi&eacute;n ofrecemos una variedad de servicios adicionales para
 					satisfacer las necesidades de las familias. Estos servicios incluyen:
 				</p>
-				<div class="icon-container">
-					<div class="icons">
+				<div class="service-container">
+					<div class="service">
 						<figure>
 							<img src="./assets/icons/niña deporte.png" alt="Bebe" />
 							<figcaption>L&uacute;dicas Deportivas</figcaption>
 						</figure>
 					</div>
-					<div class="icons">
+					<div class="service">
 						<figure>
 							<img src="./assets/icons/niña ballet.png" alt="Niña pequeña" />
 							<figcaption>Clases de Ballet</figcaption>
 						</figure>
 					</div>
-					<div class="icons">
+					<div class="service">
 						<figure>
 							<img src="./assets/icons/tareas.png" alt="Niño jugando" />
 							<figcaption>Asesor&iacute;a de Tareas</figcaption>
 						</figure>
 					</div>
-					<div class="icons">
+					<div class="service">
 						<figure>
 							<img src="./assets/icons/niña vacaciones.png" alt="Niña" />
 							<figcaption>Vacaciones Recreativas</figcaption>
