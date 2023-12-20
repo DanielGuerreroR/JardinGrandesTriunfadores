@@ -9,334 +9,12 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap"
 			rel="stylesheet" />
+		<link
+			rel="icon"
+			href="./assets/icons/Logo Jardin.svg"
+			type="image/x-icon" />
 		<title>Jardin Grandes Triunfadores</title>
-		<style>
-			:root {
-				--Ligth-green: #a4cf42;
-				--Dark-green: #778e40;
-				--Light-blue: #105ea2;
-				--Dark-blue: #1f2e7a;
-				--white: #ffffff;
-				--black: #000000;
-				/*declarando variables de tamaños para los textos*/
-				--sm: 20px;
-				--md: 26px;
-				--lg: 52px;
-			}
-			html {
-				scroll-behavior: smooth;
-				/*para transiciones de scroll suabe*/
-			}
-			body {
-				font-family: "Quicksand", sans-serif;
-				margin: 0;
-				/* padding: 0; */
-				background-image: url("./assets/Fondo/4277230_2267273.jpg");
-				background-repeat: repeat;
-			}
-			/*Menu de Navbar*/
-			nav {
-				display: flex;
-				justify-content: space-between;
-				margin-top: 0;
-				background-color: #203ac1;
-				padding: 0 24px;
-				border-bottom: 4px solid;
-				border-color: #a4cf42;
-			}
-			.navbar-left {
-				display: flex;
-			}
-			.logo {
-				width: 120px;
-			}
-			@font-face {
-				font-family: "VTC Garage Sale";
-				src: url("./Fuentes/VTC-GarageSale.ttf") format("truetype");
-			}
-			.Titulo {
-				display: flex;
-				margin: 0 12px;
-				padding: 0 12px;
-			}
-			.Titulo h1 {
-				-webkit-text-stroke: 0.1px black;
-				margin-right: 12px;
-				font-family: "VTC Garage Sale";
-				font-size: 50px;
-			}
-			.Titulo .Nombre {
-				color: var(--Ligth-green);
-			}
-			.Titulo .Apellido {
-				color: var(--Light-blue);
-			}
-			.navbar-right {
-				display: flex;
-				margin: 12px;
-			}
-			.navbar-right {
-				display: flex;
-				align-items: center;
-				padding: 32px;
-				margin: 0;
-			}
-			.navbar-right .container-menu {
-				margin-left: 16px;
-			}
-			.navbar-right .container-menu a {
-				text-decoration: none;
-				font-size: var(--md);
-				font-weight: bold;
-				justify-content: space-around;
-				color: var(--white);
-				/* border: 1px solid var(--white); */
-				padding: 8px;
-				border-radius: 8px;
-			}
-			.navbar-right .container-menu a:hover {
-				border: 1px solid var(--Dark-green);
-				color: var(--Dark-green);
-				background-color: var(--Ligth-green);
-			}
-			/*Slide de imagenes*/
-			.Slide1 {
-				height: 80vh;
-				margin: 20px;
-				border-radius: 20px;
-				border: 4px solid;
-				border-color: #a4cf42;
-				box-shadow: 5px 5px 10px var(--Dark-blue);
-				overflow: hidden;
-			}
-			.Slide1 ul {
-				padding: 0;
-				margin-block-start: 0;
-				margin-block-end: 0;
-				display: flex;
-				width: 400%;
-				height: 100%;
-				object-fit: cover;
-				/*para animar*/
-				/*llamar la animacion de cambio de imagen,
-				 dura 20s y es infinita, propiedad de animacion para que al llegar
-				 al 100% se repita*/
-				animation: cambio 20s infinite alternate;
-			}
-			.Slide1 li {
-				width: 100%;
-				list-style: none;
-			}
-			.Slide1 img {
-				/* object-fit: cover; */
-				width: 100%;
-				height: 100%;
-			}
-			/*tarjetas*/
-			.tarjetas {
-				/* width: 100vw; */
-				margin: 200px 40px;
-				border: 4px solid;
-				border-radius: 40px;
-				border-color: var(--Dark-green);
-				padding: 50px;
-				background: radial-gradient(
-					circle at 100% 600%,
-					/*posicionamiento, horizontal izq-der y vertical arriba-abajo*/
-						var(--white) 80%,
-					var(--Ligth-green) /*colores del gradiente y porcentaje que ocupa*/
-				);
-				text-align: center;
-				box-shadow: 5px 5px 10px var(--Dark-blue);
-				/*desplazamiento horizontal, vertical, blur de la sombra, color, porcentaje de transparencia*/
-			}
-			.sub-tarjetas {
-				margin: 50px 40px;
-			}
-			.head-tarjetas {
-				font-size: var(--lg);
-				color: var(--Ligth-green);
-				margin-top: 0;
-			}
-			.body-tarjetas {
-				margin-bottom: 0;
-				font-size: var(--md);
-			}
-			/*Servicios*/
-			.servicios {
-				background: radial-gradient(
-					circle at 100% 200%,
-					/*posicionamiento, horizontal izq-der y vertical arriba-abajo*/
-						var(--white) 80%,
-					var(--Ligth-green) /*colores del gradiente y porcentaje que ocupa*/
-				);
-			}
-			.service-container {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, 200px);
-				/* auto-fill rellena el espacio con columnas del tamaño puesto, auto-fit ajusta el tamaño de las columnas */
-				gap: 26px;
-				justify-content: center;
-				align-items: center;
-				margin-top: 50px;
-			}
-			.service img {
-				height: 100px;
-			}
-
-			.otros {
-				/* width: 100vw; */
-				margin: 50px 40px;
-				border: 4px solid;
-				border-radius: 40px;
-				border-color: var(--Dark-blue);
-				padding: 50px;
-				background: radial-gradient(
-					circle at 100% 600%,
-					/*posicionamiento, horizontal izq-der y vertical arriba-abajo*/
-						var(--white) 80%,
-					var(--Light-blue) /*colores del gradiente y porcentaje que ocupa*/
-				);
-				text-align: center;
-				box-shadow: 5px 5px 10px var(--Dark-blue);
-				/*desplazamiento horizontal, vertical, blur de la sombra, color, porcentaje de transparencia*/
-			}
-			.head-otros {
-				font-size: 52px;
-				color: var(--Light-blue);
-				margin-top: 0;
-			}
-
-			/*Conocenos*/
-			.conocenos {
-				background: radial-gradient(
-					circle at 100% 200%,
-					/*posicionamiento, horizontal izq-der y vertical arriba-abajo*/
-						var(--white) 70%,
-					var(--Ligth-green) /*colores del gradiente y porcentaje que ocupa*/
-				);
-			}
-			.conocenos-body {
-				display: flex;
-				justify-content: center;
-			}
-			.info-container {
-				width: 50%;
-				background: radial-gradient(
-					circle at 100% 100%,
-					/*posicionamiento, horizontal izq-der y vertical arriba-abajo*/
-						var(--white) 60%,
-					var(--Ligth-green) /*colores del gradiente y porcentaje que ocupa*/
-				);
-			}
-			.info {
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-				padding: 20px;
-				border-bottom: 3px solid;
-				border-color: var(--Dark-green);
-			}
-			.head-info {
-				font-size: var(--md);
-				font-weight: bold;
-				color: var(--Dark-green);
-			}
-			.info-container .info:last-child {
-				border-bottom: none;
-			}
-			.body-info {
-				display: flex;
-				align-items: center;
-				justify-content: end;
-				gap: 20px;
-			}
-			.body-info img {
-				width: 30px;
-			}
-			.body-info a {
-				text-decoration: none;
-				color: inherit;
-				font-size: var(--sm);
-			}
-			.info-list .body-info {
-				margin-bottom: 10px;
-			}
-			.info-list:last-child {
-				margin-bottom: 0;
-			}
-			/*segundo slider*/
-			.slide2 {
-				width: 50%;
-				padding: 0;
-				border-color: var(--Dark-blue);
-				box-shadow: 5px 5px 10px var(--Dark-blue);
-				justify-content: center;
-				align-items: center;
-				overflow: hidden;
-			}
-			.slide2 ul {
-				padding: 0;
-				margin-block-start: 0;
-				margin-block-end: 0;
-				display: flex;
-				width: 400%;
-				height: 100%;
-				object-fit: cover;
-				/*para animar*/
-				/*llamar la animacion de cambio de imagen,
-				 dura 20s y es infinita, propiedad de animacion para que al llegar
-				 al 100% se repita*/
-				animation: cambio 20s infinite alternate;
-			}
-			.slide2 li {
-				width: 100%;
-				list-style: none;
-			}
-			.slide2 img {
-				object-fit: cover;
-				width: 110%;
-				height: 110%;
-				object-position: center;
-			}
-			/*parte para la animacion de los slides*/
-			@keyframes cambio {
-				/* primera imagen 
-				dura un 20% de 20 seg = 5seg*/
-				0% {
-					margin-left: 0;
-				}
-				20% {
-					margin-left: 0;
-				}
-				/* transicion de imagen a imagen
-				5% = 1seg */
-				/* segunda imagen */
-				25% {
-					margin-left: -100%;
-				}
-				45% {
-					margin-left: -100%;
-				}
-				/* tercera imagen */
-				50% {
-					margin-left: -200%;
-				}
-				70% {
-					margin-left: -200%;
-				}
-				/* cuarta imagen */
-				75% {
-					margin-left: -300%;
-				}
-				100% {
-					margin-left: -300%;
-				}
-			}
-			/*parte responseve*/
-			@media (max-width: 640px) {
-			}
-		</style>
+		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
 		<!--Menu de barra de navegacion-->
@@ -344,7 +22,7 @@
 			<!--posicion al lado izquierdo-->
 			<!-- NOTA: quedaria mejor un logo horizontal -->
 			<div class="navbar-left">
-				<img src="./assets/Logo Jardin.svg" alt="logo" class="logo" />
+				<img src="./assets/icons/Logo Jardin.svg" alt="logo" class="logo" />
 				<div class="Titulo">
 					<h1 class="Nombre">GRANDES</h1>
 					<h1 class="Apellido">TRIUNFADORES</h1>
@@ -352,38 +30,53 @@
 			</div>
 			<!--Posicion a la derecha-->
 			<div class="navbar-right">
+				<div class="container-menu"><a href="./index.html">Inicio</a></div>
 				<div class="container-menu"><a href="#Nosotros">Nosotros</a></div>
 				<div class="container-menu"><a href="#Servicios">Servicios</a></div>
 				<div class="container-menu"><a href="#Conocenos">Conocenos</a></div>
+				<div class="container-menu"><a href="./galeria.html">Galeria</a></div>
+			</div>
+			<!--Menu de parte mobile-->
+			<!-- icono -->
+			<img src="./assets/icons/menu-line.svg" alt="menu" class="menu-icon" />
+			<!-- menu desplegrable -->
+			<div class="mobile-menu inactive">
+				<ul>
+					<li><a href="./index.html">Inicio</a></li>
+					<li><a href="#Nosotros">Nosotros</a></li>
+					<li><a href="#Servicios">Servicios</a></li>
+					<li><a href="#Conocenos">Conocenos</a></li>
+					<li><a href="./galeria.html">Galeria</a></li>
+				</ul>
 			</div>
 		</nav>
 		<!--Slide de Imagenes-->
-		<div class="Slider Slide1">
+		<div class="Slider Slide1 section">
 			<ul>
 				<li>
 					<img
-						src="./assets/entregadefotografiasfinales/Slide 1/_MG_0676.jpg"
+						src="./assets/entregadefotografiasfinales/Slide1/_MG_0676.jpg"
 						alt="" />
 				</li>
 				<li>
 					<img
-						src="./assets/entregadefotografiasfinales/Slide 1/_MG_0750.jpg"
+						src="./assets/entregadefotografiasfinales/Slide1/_MG_0750.jpg"
 						alt="" />
 				</li>
 				<li>
 					<img
-						src="./assets/entregadefotografiasfinales/Slide 1/_MG_0657.jpg"
+						src="./assets/entregadefotografiasfinales/Slide1/_MG_0657.jpg"
 						alt="" />
 				</li>
 				<li>
 					<img
-						src="./assets/entregadefotografiasfinales/Slide 1/_MG_0760.jpg"
+						src="./assets/entregadefotografiasfinales/Slide1/_MG_0760.jpg"
 						alt="" />
 				</li>
 			</ul>
 		</div>
 		<!--Nosotros-->
-		<div id="Nosotros" class="tarjetas">
+		<div id="Nosotros" class="tarjetas section">
 			<h1 class="head-tarjetas">Nosotros</h1>
 			<p class="body-tarjetas">
 				¡Bienvenido al Jardín Infantil Grandes Triunfadores! Con 16 años de
@@ -403,7 +96,7 @@
 			</p>
 		</div>
 		<!--Servicios-->
-		<div id="Servicios" class="tarjetas servicios">
+		<div id="Servicios" class="tarjetas servicios section">
 			<h1 class="head-tarjetas">Servicios</h1>
 			<div class="jardin tarjetas sub-tarjetas">
 				<h1 class="head-tarjetas">Jardin</h1>
@@ -420,7 +113,7 @@
 							<img
 								src="./assets/Imagenes/niña pequeña.png"
 								alt="Niña pequeña" />
-							<figcaption>1 - 2 años</figcaption>
+							<figcaption>1 - 2 años<br />Estimulaci&oacuten B</figcaption>
 						</figure>
 						<div class="service-info"></div>
 					</div>
@@ -429,13 +122,13 @@
 							<img
 								src="./assets/Imagenes/niña jugando.png"
 								alt="Niño jugando" />
-							<figcaption>2 - 3 años</figcaption>
+							<figcaption>2 - 3 años<br />Emprendedores</figcaption>
 						</figure>
 					</div>
 					<div class="service">
 						<figure>
 							<img src="./assets/Imagenes/niña.png" alt="Niña" />
-							<figcaption>3 - 4 años</figcaption>
+							<figcaption>3 - 4 años<br />Avanzados</figcaption>
 						</figure>
 					</div>
 					<div class="service">
@@ -443,7 +136,7 @@
 							<img
 								src="./assets/Imagenes/niña leyendo.png"
 								alt="Niña leyendo" />
-							<figcaption>4 - 5 años</figcaption>
+							<figcaption>4 - 5 años<br />Precoz</figcaption>
 						</figure>
 					</div>
 					<div class="service">
@@ -451,7 +144,7 @@
 							<img
 								src="./assets/Imagenes/niña estudiando.png"
 								alt="Niña estudiando" />
-							<figcaption>5 - 6 años</figcaption>
+							<figcaption>5 - 6 años<br />Precoz Avanzado</figcaption>
 						</figure>
 					</div>
 				</div>
@@ -496,15 +189,17 @@
 			</div>
 		</div>
 		<!--Conocenos-->
-		<div id="Conocenos" class="tarjetas conocenos">
+		<div id="Conocenos" class="tarjetas conocenos section">
 			<h1 class="head-tarjetas">Conocenos</h1>
 			<div class="conocenos-body">
 				<div class="tarjetas sub-tarjetas info-container">
 					<div class="info">
 						<div class="head-info">Direccion</div>
 						<div class="body-info">
-							<img src="./assets/icons/ubicacion.png" />
-							<a href="https://maps.app.goo.gl/4deRHQDbT8nbJDQSA"
+							<img src="./assets/icons/Ubicacion.svg" />
+							<a
+								target="_blank"
+								href="https://maps.app.goo.gl/4deRHQDbT8nbJDQSA"
 								>Cra. 93 &#35;147-06, Suba, Bogotá</a
 							>
 						</div>
@@ -513,13 +208,13 @@
 						<div class="head-info">Contacto</div>
 						<div class="info-list">
 							<div class="body-info">
-								<img src="./assets/icons/Celular.png" />
-								<a href="tel:3009737624">3009737624</a>
+								<img src="./assets/icons/Celular.svg" />
+								<a target="_blank" href="tel:3009737624">3009737624</a>
 							</div>
 
 							<div class="body-info">
-								<img src="./assets/icons/correo.png" />
-								<a href="mailto:comunicacionespcgt@gmail.com "
+								<img src="./assets/icons/Correo.svg" />
+								<a target="_blank" href="mailto:comunicacionespcgt@gmail.com "
 									>comunicacionespcgt&commat;gmail.com
 								</a>
 							</div>
@@ -529,14 +224,23 @@
 						<div class="head-info">Nuestras Redes</div>
 						<div class="info-list">
 							<div class="body-info">
-								<img src="./assets/icons/instagram.png" />
-								<a href="https://www.instagram.com/pcgrandestriunfadores/"
+								<img src="./assets/icons/whatsapp-fill.svg" />
+								<a target="_blank" href="https://wa.me/573009737624"
+									>+573009737624</a
+								>
+							</div>
+							<div class="body-info">
+								<img src="./assets/icons/instagram.svg" />
+								<a
+									target="_blank"
+									href="https://www.instagram.com/pcgrandestriunfadores/"
 									>&commat;GrandesTriunfadores</a
 								>
 							</div>
 							<div class="body-info">
-								<img src="./assets/icons/facebook.png" />
+								<img src="./assets/icons/facebook.svg" />
 								<a
+									target="_blank"
 									href="https://www.facebook.com/profile.php?id=100001593167930"
 									>Grandes Triunfadores</a
 								>
@@ -546,7 +250,7 @@
 					<div class="info">
 						<div class="head-info">Horario de atención</div>
 						<div class="body-info">
-							<img src="./assets/icons/tiempo.png" />
+							<img src="./assets/icons/Tiempo.svg" />
 							<div>
 								<h3>Jornada educativa</h3>
 								<p>Lunes a viernes de 7 a.m. a 3 p.m.</p>
@@ -560,47 +264,28 @@
 					<ul>
 						<li>
 							<img
-								src="./assets/entregadefotografiasfinales/Slide 2/_MG_0641.jpg"
+								src="./assets/entregadefotografiasfinales/Slide2/_MG_0641.jpg"
 								alt="" />
 						</li>
 						<li>
 							<img
-								src="./assets/entregadefotografiasfinales/Slide 2/_MG_0742.jpg"
+								src="./assets/entregadefotografiasfinales/Slide2/_MG_0742.jpg"
 								alt="" />
 						</li>
 						<li>
 							<img
-								src="./assets/entregadefotografiasfinales/Slide 2/_MG_0654.jpg"
+								src="./assets/entregadefotografiasfinales/Slide2/_MG_0654.jpg"
 								alt="" />
 						</li>
 						<li>
 							<img
-								src="./assets/entregadefotografiasfinales/Slide 2/_MG_0752.jpg"
+								src="./assets/entregadefotografiasfinales/Slide2/_MG_0752.jpg"
 								alt="" />
 						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
-		<!--Creditos de los iconos que vamos a usar
-<a href="https://www.flaticon.es/iconos-gratis/chico" title="chico iconos">Chico iconos creados por Freepik - Flaticon</a>
-<a href="https://www.flaticon.es/iconos-gratis/infantil" title="infantil iconos">Infantil iconos creados por Freepik - Flaticon</a>
-<a href="https://www.flaticon.es/iconos-gratis/autismo" title="autismo iconos">Autismo iconos creados por Freepik - Flaticon</a>
-<a href="https://www.flaticon.es/iconos-gratis/nina" title="niña iconos">Niña iconos creados por Freepik - Flaticon</a>
-<a href="https://www.flaticon.es/iconos-gratis/leyendo" title="leyendo iconos">Leyendo iconos creados por Freepik - Flaticon</a>
-<a href="https://www.flaticon.es/iconos-gratis/estudiante" title="estudiante iconos">Estudiante iconos creados por Freepik - Flaticon</a>
-<a href="https://www.flaticon.es/iconos-gratis/deportivo" title="deportivo iconos">Deportivo iconos creados por Freepik - Flaticon</a>
-<a href="https://www.flaticon.es/iconos-gratis/diverso" title="diverso iconos">Diverso iconos creados por Freepik - Flaticon</a>
-<a href="https://www.flaticon.es/iconos-gratis/lista" title="lista iconos">Lista iconos creados por Kiranshastry - Flaticon</a>
-<a href="https://www.flaticon.es/iconos-gratis/vacaciones" title="vacaciones iconos">Vacaciones iconos creados por Freepik - Flaticon</a>
-<a href="https://www.flaticon.es/iconos-gratis/ubicacion" title="ubicación iconos">Ubicación iconos creados por Freepik - Flaticon</a>
-<a href="https://www.flaticon.es/iconos-gratis/instagram" title="instagram iconos">Instagram iconos creados por Freepik - Flaticon</a>
-<a href="https://www.flaticon.es/iconos-gratis/facebook" title="facebook iconos">Facebook iconos creados por Freepik - Flaticon</a>
-<a href="https://www.flaticon.es/iconos-gratis/whatsapp" title="whatsapp iconos">Whatsapp iconos creados por Freepik - Flaticon</a>
-<a href="https://www.flaticon.es/iconos-gratis/llamada" title="llamada iconos">Llamada iconos creados por Gregor Cresnar - Flaticon</a>
-<a href="https://www.flaticon.es/iconos-gratis/correo" title="correo iconos">Correo iconos creados por Freepik - Flaticon</a>
-fondo
-<a href="https://www.freepik.es/vector-gratis/patron-colorido-garabatos-animales-palabras_4277230.htm#query=patron%20infantil&position=1&from_view=search&track=ais">Imagen de pikisuperstar</a> en Freepik
--->
 	</body>
+	<script src="./main.js"></script>
 </html>

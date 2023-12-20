@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!--traer fuentes desde Google Fonts, con links https://fonts.google.com/specimen/Quicksand?query=Quicksand-->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap"
+			rel="stylesheet" />
+		<link
+			rel="icon"
+			href="./assets/icons/Logo Jardin.svg"
+			type="image/x-icon" />
+		<title>Galeria</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<!--Menu de barra de navegacion-->
+		<nav class="navbar">
+			<!--posicion al lado izquierdo-->
+			<!-- NOTA: quedaria mejor un logo horizontal -->
+			<div class="navbar-left">
+				<img src="./assets/icons/Logo Jardin.svg" alt="logo" class="logo" />
+				<div class="Titulo">
+					<h1 class="Nombre">GRANDES</h1>
+					<h1 class="Apellido">TRIUNFADORES</h1>
+				</div>
+			</div>
+			<!--Posicion a la derecha-->
+			<div class="navbar-right">
+				<div class="container-menu"><a href="./index.html">Inicio</a></div>
+				<div class="container-menu"><a href="#GalZonVerd">Zona Verde</a></div>
+				<div class="container-menu"><a href="#GalPeq">Peque&ntilde;os</a></div>
+				<div class="container-menu"><a href="#GalSal">Salones</a></div>
+				<div class="container-menu"><a href="#GalCom">Zonas Comunes</a></div>
+				<div class="container-menu"><a href="./galeria.html">Galeria</a></div>
+			</div>
+			<!--Menu de parte mobile-->
+			<!-- icono -->
+			<img src="./assets/icons/menu-line.svg" alt="menu" class="menu-icon" />
+			<!-- menu desplegrable -->
+			<div class="mobile-menu inactive">
+				<ul>
+					<li><a href="./index.html">Inicio</a></li>
+					<li><a href="#GalZonVerd">Zona Verde</a></li>
+					<li><a href="#GalPeq">Peque&ntilde;os</a></li>
+					<li><a href="#GalSal">Salones</a></li>
+					<li><a href="#GalCom">Zonas Comunes</a></li>
+					<li><a href="./galeria.html">Galeria</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- Galería de Zona Verde -->
+		<div class="tarjetas tarjetas-galeria section" id="GalZonVerd">
+			<h1 class="head-tarjetas">Nuestra Zona Verde</h1>
+			<div id="GaleriaZonaVerde" class="container"></div>
+		</div>
+
+		<!-- Galería de Los Más Pequeños -->
+		<div class="tarjetas tarjetas-galeria section" id="GalPeq">
+			<h1 class="head-tarjetas">Zonas para los más peque&ntilde;os</h1>
+			<div id="GaleriaPequeños" class="container"></div>
+		</div>
+
+		<!-- Galería de Salones -->
+		<div class="tarjetas tarjetas-galeria section" id="GalSal">
+			<h1 class="head-tarjetas">Nuestros Salones</h1>
+			<div id="GaleriaSalones" class="container"></div>
+		</div>
+
+		<!-- Galería de Zonas Comunes -->
+		<div class="tarjetas tarjetas-galeria section" id="GalCom">
+			<h1 class="head-tarjetas">Nuestras Zonas Comunes</h1>
+			<div id="GaleriaComun" class="container"></div>
+		</div>
+	</body>
+	<script src="./main.js"></script>
+</html>
